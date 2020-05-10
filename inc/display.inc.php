@@ -6,12 +6,11 @@ function display_images(){
         if ($dir_handle = opendir($dir)){
             while ($filename = readdir($dir_handle)){
                 if (!is_dir($filename)){
-                    $filename = urlencode($filename);
+                    $filename = rawurlencode($filename);
                     echo "<div class=\"container\">
                     <div class=\"image\">
                     <img src=\"pictures/$filename\"alt=\"$filename\" title=\"$filename\">
-                    <figcaption>$filename</figcaption>
-                    ";
+                    <figcaption>$filename</figcaption>";
                     echo "<a href=\"?file=$filename\" title=\"delete picture\"><i class=\"fas fa-times\"></i></a></div></div>";
                 }
             }
