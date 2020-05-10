@@ -3,6 +3,22 @@
   margin: 0 auto;
 }
 
+/* style.css */
+
+#login,
+#logout {
+  /* set initial display to none */
+  display: none;
+}
+
+#showPassword {
+  text-decoration: underline;
+}
+
+#showPassword:hover {
+  cursor: pointer;
+}
+
 body {
   background: rgb(2, 0, 36);
   background: linear-gradient(
