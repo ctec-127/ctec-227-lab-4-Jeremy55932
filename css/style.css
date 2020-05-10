@@ -11,19 +11,25 @@ body {
     rgba(157, 239, 255, 1) 50%,
     rgba(0, 212, 255, 1) 100%
   );
+  width: 100%;
 }
 
 div.container {
   width: 20%;
 }
 
-header {
+header,
+footer {
   font-size: 2rem;
   border: 1px solid #000000;
   text-align: center;
   padding-top: 25px;
   padding-bottom: 20px;
   background: #ffffff65;
+}
+
+footer {
+  margin-top: 20px;
 }
 
 form {
@@ -71,7 +77,7 @@ div.image {
   border-bottom-right-radius: 1%;
   display: flex;
   flex-direction: column;
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin-top: 20px;
   box-shadow: 5px 6px 5px 0;
 }
@@ -102,10 +108,8 @@ i {
 }
 
 div.image:hover {
-  width: 110%;
   transition: 0.5s;
   box-shadow: 10px 12px 10px 0;
-  transform: perspective(2000px) rotate(360deg);
 }
 
 img {
@@ -127,4 +131,9 @@ p.alert {
   width: 30%;
   opacity: 90%;
   border: 1px solid #ffffff;
+}
+
+figcaption {
+  /* width: 110%; */
+  /* text-align: left; */
 }
