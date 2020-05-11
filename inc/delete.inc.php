@@ -9,8 +9,7 @@ if (isset($_GET['file'])){
 
     if (unlink('pictures/' . $_GET['file'])) {
         $delete_file = $_GET['file'];
-        // echo "$delete_file . "was deleted";
-        header('location: uploads.php');
+        header('location: home.php');
     } else {
         echo "Cannot delete photo.";
     }

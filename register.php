@@ -11,23 +11,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = hash('sha512', $db->real_escape_string($_POST['password']));
     $username = $db->real_escape_string($_POST['username']);
 
-    $sql = "INSERT INTO user (email,first_name,last_name,password,username) 
+    $sql = "INSERT INTO user (email,first_name,last_name,password,username)
                     VALUES('$email','$first_name','$last_name','$password','$username')";
 
     // echo $sql;
     $result = $db->query($sql);
 
     if (!$result) {
-        echo "<div>There was a problem registering your account</div>";
+        echo "<div class=\"register\">There was a problem registering your account</div>";
     } else {
-        echo "<div>You are now ready to go!</div>";
+        if (mkdir($username, 0777, true)) {
+            die('Your picture folder has been created along with your login account.');
+        }
+        echo "<div class=\"register\">You are now ready to go!</div>";
         echo '<a href="login.php" title="Login Page">Login</a>';
     }
 }
 ?>
 
 <h1>Register</h1>
-<form action="register.php" method="POST">
+<form action="register.php" method="POST" class="register">
     <label for="username">Username</label>
     <input type="text" id="username" required name="username">
     <br><br>

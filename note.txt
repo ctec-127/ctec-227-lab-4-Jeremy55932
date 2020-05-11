@@ -1,0 +1,17 @@
+- When a user goes to your gallery page and they are not logged in:
+    - Present the Login / Register links
+    - Welcome to the image gallery app
+    - Maybe share with them some info about what the app does
+    - Hide the upload form stuff
+- Register
+    - register.php
+    - User account created
+    - Create their folder
+        -   Check to see if a folder exists for username using is_dir()
+        -   If a folder does NOT exist, then we need to create one for that user
+    - Link to login.php
+- Login
+    - User logs in with email and password
+    - We set session variable with their username and maybe their first name
+    - We then redirect them to the main gallery page
+Collapse

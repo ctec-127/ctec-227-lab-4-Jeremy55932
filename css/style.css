@@ -3,11 +3,10 @@
   margin: 0 auto;
 }
 
-/* style.css */
+/* lab 5 css */
 
 #login,
 #logout {
-  /* set initial display to none */
   display: none;
 }
 
@@ -18,6 +17,24 @@
 #showPassword:hover {
   cursor: pointer;
 }
+
+.welcome {
+  text-align: center;
+}
+
+a {
+  /* text-align: center; */
+}
+
+.register {
+  text-align: center;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+/* lab 4 css */
 
 body {
   background: rgb(2, 0, 36);

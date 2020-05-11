@@ -26,13 +26,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         header('location: home.php');
     } else {
-        echo '<p>Please try again or go away</p>';
+        echo '<p>Please try again.</p>';
     }
 }
 
 ?>
 
-<form action="login.php" method="POST">
+<form action="login.php" method="POST" class="login">
     <label for="email">Email</label>
     <br><br>
     <input type="email" name="email" id="email" required>
