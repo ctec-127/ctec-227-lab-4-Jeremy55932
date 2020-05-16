@@ -3,6 +3,8 @@
 $pageTitle = "Register";
 require 'inc/header.inc.php';
 require_once 'inc/db_connect.inc.php';
+require 's.php';
+// require 'inc/display.inc.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $db->real_escape_string($_POST['email']);
@@ -18,15 +20,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $result = $db->query($sql);
 
     if (!$result) {
-        echo "<div class=\"register\">There was a problem registering your account</div>";
+        echo "<div class=\"register\">There is already an account with that name</div>";
     } else {
         if (mkdir($username, 0777, true)) {
-            die('Your picture folder has been created along with your login account.');
+            // echo 'Your picture folder has been created along with your login account.';
+            echo "<div class=\"register\">You are now ready to go!</div>";
+            echo '<a href="login.php" title="Login Page">Login</a>';
+        } else {
+            echo 'There is already an account with that name';
         }
-        echo "<div class=\"register\">You are now ready to go!</div>";
-        echo '<a href="login.php" title="Login Page">Login</a>';
     }
 }
+// if (!$result) {
+//     echo "<div class=\"register\">There was a problem registering your account</div>";
+// } else {
+//     If (!is_dir(has_folder($username) == '$username'){
+//         create_folder($username);
+
+//     } else {
+//         echo 'There is already an account with that name';
+//     }
+
 ?>
 
 <h1>Register</h1>

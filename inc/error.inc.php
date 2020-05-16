@@ -16,11 +16,10 @@
 
 		$target_file = basename($_FILES['file_upload']['name']);
 
-		$upload_dir = 'pictures';
+		$upload_dir = '$username';
 
 		if(move_uploaded_file($tmp_file, $upload_dir . "/" . $target_file)){
 			$message = "<div class=\"alert alert-success d-flex justify-content-center \" role=\"alert\">File uploaded successfully</div>";
-			// echo '<p class=\'message\'>\' . $upload_dir . '</p>';
 		} else {
 			$error = $_FILES['file_upload']['error'];
 			$message = "<p class=\"message alert alert-danger\" role=\"alert\">" . $upload_errors[$error] . "</p>";

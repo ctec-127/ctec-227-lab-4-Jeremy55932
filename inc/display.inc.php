@@ -1,7 +1,12 @@
 <?php
-function display_images(){
+// session_start();
+// include '../login.php'
+// include 'register.php';
 
-    $dir = "$username";
+function display_images(){
+    // if (isset($_POST['username'])){
+    $dir = $_SESSION['folder'];
+
     if (is_dir($dir)) {
         if ($dir_handle = opendir($dir)){
             while ($filename = readdir($dir_handle)){
@@ -9,7 +14,7 @@ function display_images(){
                     $filename = rawurlencode($filename);
                     echo "<div class=\"container\">
                     <div class=\"image\">
-                    <img src=\"pictures/$filename\"alt=\"$filename\" title=\"$filename\">
+                    <img src=\"$dir/$filename\"alt=\"$filename\" title=\"$filename\">
                     <figcaption>$filename</figcaption>";
                     echo "<a href=\"?file=$filename\" title=\"delete picture\"><i class=\"fas fa-times\"></i></a></div></div>";
                 }
@@ -18,3 +23,4 @@ function display_images(){
         }
     }
 }
+// }

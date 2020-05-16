@@ -3,10 +3,13 @@
 session_start();
 $pageTitle = 'Home';
 require 'inc/header.inc.php';
-// require 'inc/display.php'
+$_SESSION['folder'] = 'username';
+// require 'inc/display.inc.php';
+// include 'register.php';
+
 ?>
 <header>
-	<h1><?= isset($_SESSION['first_name']) ? $_SESSION['first_name'] : '' ?> File Uploads</h1>
+	<h1><?= isset($_SESSION['first_name']) ? $_SESSION['first_name'] . "'s": '' ?> File Uploads</h1>
 </header>
 <ul>
     <li>
@@ -20,15 +23,16 @@ require 'inc/header.inc.php';
     </li>
 </ul>
 
-<h1 class="welcome">Welcome to our great site <?= isset($_SESSION['first_name']) ? $_SESSION['first_name'] : 'New User!' ?></h1>
+<h1 class="welcome">Welcome to our great site <?= isset($_SESSION['first_name']) ? $_SESSION['first_name'] : 'where you can upload all your images into your own personal online account' ?></h1>
 <!-- <div id="message"></div> -->
 
 <?php
 	require 'inc/footer.inc.php';
 	include "inc/error.inc.php";
 	include "inc/form.inc.php";
-	include "inc/delete.inc.php";
-	display_images();
+    include "inc/delete.inc.php";
+
+	// display_images();
 	?>
 <!-- <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 <script defer src="js/script.js"></script>
