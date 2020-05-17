@@ -41,7 +41,7 @@ ul li {
 .login:hover {
 }
 
-body.form {
+.form {
   background: linear-gradient(
     90deg,
     rgb(2, 0, 36) 0%,
@@ -52,19 +52,32 @@ body.form {
 
 .login {
   border: 1px solid #000000;
+  background: #ffffff33;
   font-size: 1.5rem;
   padding: 30px;
   position: absolute;
   right: 30%;
   left: 30%;
-  top: 20%;
-  bottom: 10%;
+  top: 200px;
+  bottom: 5%;
   text-align: left;
 }
 .login label {
 }
+
 .login input {
   width: 100%;
+}
+
+ul {
+  display: flex;
+  font-size: 1.2rem;
+}
+li {
+}
+
+header {
+  /* margin-bottom: 110px; */
 }
 
 /* lab 4 css */
@@ -98,7 +111,7 @@ footer {
   margin-top: 20px;
 }
 
-form {
+form.upload {
   text-align: center;
   padding: 20px 0;
   position: fixed;

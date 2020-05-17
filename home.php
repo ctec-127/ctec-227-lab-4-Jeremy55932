@@ -9,19 +9,19 @@ require 'inc/display.inc.php';
 
 ?>
 <header>
-	<h1><?= isset($_SESSION['first_name']) ? $_SESSION['first_name'] . "'s": '' ?> File Uploads</h1>
+    <ul>
+        <li>
+            <a href="register.php" id="register">Register</a>
+        </li>
+        <li>
+            <a href="login.php" id="login">Login</a>
+        </li>
+        <li>
+            <a href="" id="logout">Logout</a>
+        </li>
+    </ul>
+	<h1><?= isset($_SESSION['first_name']) ? $_SESSION['first_name'] . "'s File Uploads": 'Online File Uploader' ?></h1>
 </header>
-<ul>
-    <li>
-        <a href="register.php" id="register">Register</a>
-    </li>
-    <li>
-        <a href="login.php" id="login">Login</a>
-    </li>
-    <li>
-        <a href="" id="logout">Logout</a>
-    </li>
-</ul>
 
 <h1 class="welcome">Welcome to our great site <?= isset($_SESSION['first_name']) ? $_SESSION['first_name'] : 'where you can upload all your images into your own personal online account' ?></h1>
 <!-- <div id="message"></div> -->

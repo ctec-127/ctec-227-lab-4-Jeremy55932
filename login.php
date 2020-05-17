@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['first_name'] = $row['first_name'];
 
         header('location: home.php');
-        include "inc/form.inc.php";
+        include_once "inc/form.inc.php";
 
     } else {
         echo '<p>Please try again.</p>';
