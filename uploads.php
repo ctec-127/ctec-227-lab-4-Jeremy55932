@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 session_start();
 $pageTitle = 'Home';
 require 'inc/header.inc.php';session_start();
@@ -34,4 +34,4 @@ include "inc/display.inc.php";
 	?>
 
 </body>
-</html>
+</html> -->

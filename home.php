@@ -3,8 +3,8 @@
 session_start();
 $pageTitle = 'Home';
 require 'inc/header.inc.php';
-$_SESSION['folder'] = 'username';
-// require 'inc/display.inc.php';
+// $_SESSION['folder'] = 'username';
+require 'inc/display.inc.php';
 // include 'register.php';
 
 ?>
@@ -13,7 +13,7 @@ $_SESSION['folder'] = 'username';
 </header>
 <ul>
     <li>
-        <a href="register.php">Register</a>
+        <a href="register.php" id="register">Register</a>
     </li>
     <li>
         <a href="login.php" id="login">Login</a>
@@ -29,10 +29,10 @@ $_SESSION['folder'] = 'username';
 <?php
 	require 'inc/footer.inc.php';
 	include "inc/error.inc.php";
-	include "inc/form.inc.php";
     include "inc/delete.inc.php";
+    include 'inc/logged-in-form.inc.php';
 
-	// display_images();
+	display_images();
 	?>
 <!-- <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 <script defer src="js/script.js"></script>

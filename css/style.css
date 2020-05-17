@@ -22,16 +22,49 @@
   text-align: center;
 }
 
-a {
-  /* text-align: center; */
-}
-
 .register {
   text-align: center;
 }
 
 ul li {
   list-style-type: none;
+}
+
+#login {
+  display: inline-block;
+}
+
+#register {
+  display: inline-block;
+}
+
+.login:hover {
+}
+
+body.form {
+  background: linear-gradient(
+    90deg,
+    rgb(2, 0, 36) 0%,
+    rgba(157, 239, 255, 1) 50%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.login {
+  border: 1px solid #000000;
+  font-size: 1.5rem;
+  padding: 30px;
+  position: absolute;
+  right: 30%;
+  left: 30%;
+  top: 20%;
+  bottom: 10%;
+  text-align: left;
+}
+.login label {
+}
+.login input {
+  width: 100%;
 }
 
 /* lab 4 css */
@@ -76,7 +109,6 @@ form {
 
 form:hover {
   opacity: 90%;
-  color: #00aeff;
 }
 
 input {

@@ -23,6 +23,8 @@ fetch("helper/is_logged_in.php")
       login.style.display = "none";
       const logout = document.querySelector("#logout");
       logout.style.display = "inline-block";
+      const register = document.querySelector("#register");
+      register.style.display = "none";
 
       logout.addEventListener("click", function (e) {
         e.preventDefault();
@@ -34,6 +36,7 @@ fetch("helper/is_logged_in.php")
               logout.style.display = "none";
               document.querySelector("#message").innerHTML =
                 "<p>You have been logged out</p>";
+
               document.querySelector("h1").innerText = "Welecome to our Site!";
             }
           });

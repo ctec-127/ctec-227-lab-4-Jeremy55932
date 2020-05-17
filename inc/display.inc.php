@@ -5,8 +5,7 @@
 
 function display_images(){
     // if (isset($_POST['username'])){
-    $dir = $_SESSION['folder'];
-
+    $dir = $_SESSION['username'];
     if (is_dir($dir)) {
         if ($dir_handle = opendir($dir)){
             while ($filename = readdir($dir_handle)){

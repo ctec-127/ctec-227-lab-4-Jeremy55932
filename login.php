@@ -25,6 +25,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['first_name'] = $row['first_name'];
 
         header('location: home.php');
+        include "inc/form.inc.php";
+
     } else {
         echo '<p>Please try again.</p>';
     }
@@ -32,18 +34,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 ?>
 
-<form action="login.php" method="POST" class="login">
-    <label for="email">Email</label>
-    <br><br>
-    <input type="email" name="email" id="email" required>
-    <br><br>
-    <label for="password">Password</label>
-    <span id="showPassword" onclick="showPassword();">Show Password</span>
-    <br><br>
-    <input type="password" name="password" id="password" required>
-    <br><br>
-    <input type="submit" value="Login">
-</form>
+<?php
+require 'inc/login_form.inc.php';
+?>
 
 <script src="js/script.js"></script>
 

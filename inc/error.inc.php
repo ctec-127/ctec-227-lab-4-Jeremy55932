@@ -1,4 +1,5 @@
 <?php
+// $_SESSION['folder'] = 'username';
 
 	$upload_errors = array(
 							UPLOAD_ERR_OK 				=> "No errors.",
@@ -16,7 +17,7 @@
 
 		$target_file = basename($_FILES['file_upload']['name']);
 
-		$upload_dir = '$username';
+		$upload_dir = $_SESSION['username'];
 
 		if(move_uploaded_file($tmp_file, $upload_dir . "/" . $target_file)){
 			$message = "<div class=\"alert alert-success d-flex justify-content-center \" role=\"alert\">File uploaded successfully</div>";
