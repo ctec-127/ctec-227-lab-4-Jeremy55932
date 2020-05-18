@@ -3,83 +3,6 @@
   margin: 0 auto;
 }
 
-/* lab 5 css */
-
-#login,
-#logout {
-  display: none;
-}
-
-#showPassword {
-  text-decoration: underline;
-}
-
-#showPassword:hover {
-  cursor: pointer;
-}
-
-.welcome {
-  text-align: center;
-}
-
-.register {
-  text-align: center;
-}
-
-ul li {
-  list-style-type: none;
-}
-
-#login {
-  display: inline-block;
-}
-
-#register {
-  display: inline-block;
-}
-
-.login:hover {
-}
-
-.form {
-  background: linear-gradient(
-    90deg,
-    rgb(2, 0, 36) 0%,
-    rgba(157, 239, 255, 1) 50%,
-    rgba(0, 212, 255, 1) 100%
-  );
-}
-
-.login {
-  border: 1px solid #000000;
-  background: #ffffff33;
-  font-size: 1.5rem;
-  padding: 30px;
-  position: absolute;
-  right: 30%;
-  left: 30%;
-  top: 200px;
-  bottom: 5%;
-  text-align: left;
-}
-.login label {
-}
-
-.login input {
-  width: 100%;
-}
-
-ul {
-  display: flex;
-  font-size: 1.2rem;
-}
-li {
-}
-
-header {
-  /* margin-bottom: 110px; */
-}
-
 /* lab 4 css */
 
 body {
@@ -97,8 +20,7 @@ div.container {
   width: 20%;
 }
 
-header,
-footer {
+header {
   font-size: 2rem;
   border: 1px solid #000000;
   text-align: center;
@@ -108,7 +30,12 @@ footer {
 }
 
 footer {
-  margin-top: 20px;
+  font-size: 2rem;
+  border: 1px solid #000000;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  background: #ffffff65;
 }
 
 form.upload {
@@ -134,7 +61,6 @@ input:hover {
 
 input.upload_button {
   background: #ffffff;
-  /* padding: 5px; */
   font-size: 1.3rem;
 }
 
@@ -211,7 +137,115 @@ p.alert {
   border: 1px solid #ffffff;
 }
 
-figcaption {
-  /* width: 110%; */
-  /* text-align: left; */
+/* lab 5 css */
+
+#login,
+#logout {
+  display: none;
+}
+
+#showPassword {
+  text-decoration: underline;
+}
+
+#showPassword:hover {
+  cursor: pointer;
+}
+
+.welcome {
+  text-align: center;
+}
+
+.register {
+  text-align: center;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+#login {
+  display: inline-block;
+}
+
+#register {
+  display: inline-block;
+}
+
+.form {
+  background: linear-gradient(
+    90deg,
+    rgb(2, 0, 36) 0%,
+    rgba(157, 239, 255, 1) 50%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.login {
+  border: 1px solid #000000;
+  background: #ffffff33;
+  font-size: 1.5rem;
+  padding: 30px;
+  position: absolute;
+  right: 30%;
+  left: 30%;
+  top: 200px;
+  bottom: 5%;
+  text-align: left;
+}
+
+.login input {
+  width: 100%;
+}
+
+ul.homepage,
+ul.loginform {
+  display: flex;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 10px;
+}
+
+ul.homepage li {
+  margin-top: -20px;
+  margin-left: 10px;
+}
+
+ul.rlogin,
+ul.loginform {
+  font-size: 1.2rem;
+  position: absolute;
+  right: 10px;
+}
+
+ul.rlogin li {
+  margin-top: -20px;
+}
+
+ul.home {
+  font-size: 1.5rem;
+}
+
+header {
+  margin-bottom: 50px;
+}
+
+.rlogin {
+  margin-right: 10px;
+  margin-bottom: -100px;
+}
+
+.welcome {
+  color: #ffffff;
+}
+
+ul.loginform li {
+  margin-right: 10px;
+  margin-top: -20px;
+}
+
+footer {
+  margin-top: 100%;
 }

@@ -40,4 +40,4 @@ require 'inc/login_form.inc.php';
 
 <script src="js/script.js"></script>
 
-<?php require 'inc/footer.inc.php'; ?>
+<?php require 'inc/login.footer.inc.php'; ?>

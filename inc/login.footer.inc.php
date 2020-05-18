@@ -1,5 +1,5 @@
 </body>
-<footer class="home">
+<footer class="loginfooter">
     <p>&copy; Jeremy's Uploader</p>
 </footer>
 

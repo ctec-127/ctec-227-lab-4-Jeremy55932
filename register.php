@@ -3,7 +3,7 @@
 $pageTitle = "Register";
 require 'inc/header.inc.php';
 require_once 'inc/db_connect.inc.php';
-require 's.php';
+// require 's.php';
 // require 'inc/display.inc.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -31,19 +31,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 }
-// if (!$result) {
-//     echo "<div class=\"register\">There was a problem registering your account</div>";
-// } else {
-//     If (!is_dir(has_folder($username) == '$username'){
-//         create_folder($username);
-
-//     } else {
-//         echo 'There is already an account with that name';
-//     }
 
 ?>
-
-<h1>Register</h1>
+<header>
+    <ul class="rlogin">
+        <li class="rlogin">
+            <a href="login.php" id="login">Login</a>
+        </li>
+    </ul>
+    <ul class="home">
+        <h1>Register</h1>
+        <li>
+            <a href="home.php" id="home">Home</a>
+        </li>
+    </ul>
+</header>
 <form action="register.php" method="POST" class="register">
     <label for="username">Username</label>
     <input type="text" id="username" required name="username">
@@ -62,4 +64,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <br><br>
     <input type="submit" value="Register">
 </form>
-<?php require 'inc/footer.inc.php'; ?>
+<?php require 'inc/register.footer.inc.php'; ?>
